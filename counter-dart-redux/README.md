@@ -52,4 +52,8 @@ Buttons dispatch events to the store, and the display subscribe to the store.
 5. visit http://localhost:8080/ to see the app in action
 6. execute `pub run test -p chrome` to run unit tests
 
+***Possible improvements***
+1. Use [over_react](https://workiva.github.io/over_react/) to improve the react syntax. [As of 4th Jan 2019, over_react 1.30.0 is not compatible with Dart 2]
+2. Use [flutter_redux](https://pub.dartlang.org/packages/flutter_redux) to avoid passing in the store from component to component.
+
 
