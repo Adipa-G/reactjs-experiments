@@ -24,7 +24,7 @@ class GameState {
     }
 }
 
-export default class Game extends React.Component {
+export class Game extends React.Component {
     constructor(props: any) {
         super(props);
 

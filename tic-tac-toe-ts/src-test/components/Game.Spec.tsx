@@ -2,7 +2,7 @@ import * as React from 'react';
 import { shallow } from 'enzyme';
 
 import Board from '../../src/components/Board';
-import Game from '../../src/components/Game';
+import {Game} from '../../src/components/Game';
 
 describe("<Game/>", () => {
   it("should render", () => {
