@@ -16,7 +16,7 @@ class CounterButtons extends Component {
 
   @override
   render() {
-    return span({},
+    return span({'className' : 'counter-buttons'},
       button({
         'type' : 'button',
         'className' : 'btn btn-default',
