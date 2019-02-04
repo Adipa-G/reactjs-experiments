@@ -9,7 +9,7 @@ import reducer from "../../src/redux/Reducer";
 import Square from '../../src/components/Square';
 
 describe("<Square/>", () => {
-  var store = createStore(reducer);
+  let store = createStore(reducer);
 
   it("should render", () => {
     const wrapper = shallow(<Provider store={store}><Square key={1} index={100}/></Provider>);

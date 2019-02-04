@@ -14,7 +14,7 @@ export class GameState {
     }
 
     clone() : GameState {
-        var clone = new GameState();
+        let clone = new GameState();
         clone.history = this.history.slice();
         clone.stepNumber = this.stepNumber;
         clone.xIsNext = this.xIsNext;

@@ -9,7 +9,7 @@ import reducer from "../../src/redux/Reducer";
 import {Game} from '../../src/components/Game';
 
 describe("<Game/>", () => {
-  var store = createStore(reducer);
+  let store = createStore(reducer);
 
   it("should render", () => {
     const wrapper = shallow(<Provider store={store}><Game/></Provider>);

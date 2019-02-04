@@ -21,7 +21,7 @@ class Square extends React.Component<SquareProps, {}> {
 }
 
 const mapStateToProps = (state: GameState, ownProps: SquareProps) => {
-    var value = state.history[state.history.length - 1].squares[ownProps.index];
+    let value:string = state.history[state.history.length - 1].squares[ownProps.index];
     return {
         value: value
     };

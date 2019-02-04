@@ -4,23 +4,23 @@ import { GameState } from "../../src/models/GameState";
 
 describe("Reducer", () => {
     it("Should return the initial state", () => {
-        var result = reducer(undefined, {});
+        let result:GameState = reducer(undefined, {});
         expect(result).toBeDefined();
     });
 
     it("Should return the same state when winner", () => {
-        var orgState = reducer(undefined, {});
+        let orgState:GameState = reducer(undefined, {});
         orgState.winner = "X";
 
-        var result = reducer(orgState, {});
+        let result:GameState = reducer(orgState, {});
 
         expect(result).toBe(orgState);
     });
 
     it("Should calculate the next state ", () => {
-        var orgState = reducer(undefined, {});
+        let orgState:GameState = reducer(undefined, {});
         
-        var result = reducer(orgState, {SquareIndex : 0});
+        let result:GameState = reducer(orgState, {SquareIndex : 0});
 
         expect(result).not.toBe(orgState);
         expect(result.history.length).toBe(3);
@@ -33,12 +33,12 @@ describe("Reducer", () => {
     });
 
     it("Should set winner if there is a winner", () => {
-        var orgState = reducer(undefined, {});
+        let orgState:GameState = reducer(undefined, {});
         orgState.history[1].squares[0] = "X";
         orgState.history[1].squares[1] = "X";
         orgState.history[1].squares[2] = "X";
         
-        var result = reducer(orgState, {SquareIndex : 5});
+        let result:GameState = reducer(orgState, {SquareIndex : 5});
 
         expect(result.winner).toBe("X");
     });

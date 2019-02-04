@@ -9,7 +9,7 @@ export class Game extends React.Component<any,{}> {
     }
 
     render() {
-        let status;
+        let status:string;
         if (this.props.winner) {
             status = 'Winner: ' + this.props.winner;
         } else {

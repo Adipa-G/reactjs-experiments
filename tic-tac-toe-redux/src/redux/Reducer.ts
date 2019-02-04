@@ -26,9 +26,9 @@ function getInitialState(): GameState {
     let startValues: Array<string> = new Array<string>(9);
     (startValues as any).fill(null);
 
-    var snapshot = new GameSnapshot(startValues);
+    let snapshot = new GameSnapshot(startValues);
 
-    var state = new GameState();
+    let state = new GameState();
     state.history.push(snapshot);
 
     return state;
@@ -48,11 +48,11 @@ export default function (state: GameState = initialState, action: any): GameStat
 
     squares[action.SquareIndex] = gameState.xIsNext ? 'X' : 'O';
 
-    var snapshot = new GameSnapshot(squares);
+    let snapshot = new GameSnapshot(squares);
     snapshot.row = Math.floor(action.SquareIndex / 3) + 1;
     snapshot.col = action.SquareIndex % 3 + 1;
 
-    var nextState =  gameState.clone();
+    let nextState =  gameState.clone();
     nextState.history.push(snapshot)
     nextState.stepNumber = history.length;
     nextState.xIsNext = !gameState.xIsNext;
